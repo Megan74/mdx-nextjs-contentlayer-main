@@ -12,7 +12,7 @@ export default function ArticleCard({
   readingTime,
 }) {
   return (
-    <div>
+    <div className="container flex row wrap justifi">
       <section className='text-gray-600 body-font'>
         <div className='container px-5 py-24 mx-auto'>
           <div className='flex flex-wrap -m-4'>
@@ -22,7 +22,7 @@ export default function ArticleCard({
                   className='lg:h-48 md:h-36 w-full object-cover object-center'
                   src={image}
                   width={720}
-                  height={500}
+                  height={400}
                   alt='blog'
                 />
                 <div className='p-6'>
