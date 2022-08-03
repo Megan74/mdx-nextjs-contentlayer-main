@@ -13,7 +13,7 @@ export default function ArticleCard({
   readingTime,
 }) {
   return (
-    <div className='w-100% flex flex-col px-3'>
+    <div className='w-100 flex flex-col px-3'>
       <section className='text-gray-600 body-font'>
         <div className='container px-5 py-24 mx-auto'>
           <div className='flex flex-wrap -m-4'>
