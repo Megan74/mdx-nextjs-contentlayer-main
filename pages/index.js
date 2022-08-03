@@ -10,7 +10,7 @@ export default function Home({articles}) {
   return (
     <div>
       <Head>
-        <title>Create Next App</title>
+        <title>Megan's Blog</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header></Header>

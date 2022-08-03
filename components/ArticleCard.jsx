@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 
 export default function ArticleCard({
@@ -12,19 +13,19 @@ export default function ArticleCard({
   readingTime,
 }) {
   return (
-    <div>
+    <div className='w-full flex flex-col px-3'>
       <section className='text-gray-600 body-font'>
         <div className='container px-5 py-24 mx-auto'>
           <div className='flex flex-wrap -m-4'>
             <div className='p-4 md:w-1/3'>
               <div className='h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden'>
-                <Image
-                  className='lg:h-48 md:h-36 w-full object-cover object-center'
+                <Link href={`/article/${slug}`} ><a><Image
+                  className='lg:h-48 md:h-36 w-full object-cover object-center hover:opacity-75 cursor-pointer'
                   src={image}
-                  width={720}
-                  height={500}
+                  width={920}
+                  height={900}
                   alt='blog'
-                />
+                /></a></Link>
                 <div className='p-6'>
                   <h2 className='tracking-widest text-xs title-font font-medium text-gray-400 mb-1'>
                     {category}
