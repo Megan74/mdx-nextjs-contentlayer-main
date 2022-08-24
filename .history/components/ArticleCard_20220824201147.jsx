@@ -13,17 +13,17 @@ export default function ArticleCard({
   readingTime,
 }) {
   return (
-   
-      <section className=' text-gray-600 body-font'>
-       
-         
-            <div className=' p-4 m-auto mb-4 mt-4 md:w-1/3'>
-              <div className='w-[40rem] m-auto border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden  mb-4 '>
+    <div className='w-100% flex flex-col px-3'>
+      <section className='text-gray-600 body-font'>
+        <div className='container px-5 py-24 mx-auto'>
+          <div className='flex flex-wrap  -m-4'>
+            <div className='p-4 m-auto md:w-1/3'>
+              <div className=' h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden'>
                 <Link href={`/article/${slug}`} ><a><Image
                   className='lg:h-48 md:h-36 w-full object-cover object-center hover:opacity-75 cursor-pointer'
                   src={image}
-                  width={1280}
-                  height={1280}
+                  width={920}
+                  height={900}
                   alt='blog'
                 /></a></Link>
                 <div className='p-6'>
@@ -74,9 +74,9 @@ export default function ArticleCard({
                 </div>
               </div>
             </div>
-       
-      
+          </div>
+        </div>
       </section>
-   
+    </div>
   );
 }

@@ -18,12 +18,12 @@ export default function ArticleCard({
        
          
             <div className=' p-4 m-auto mb-4 mt-4 md:w-1/3'>
-              <div className='w-[40rem] m-auto border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden  mb-4 '>
+              <div className='w-[50rem] m-auto border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden  mb-4 '>
                 <Link href={`/article/${slug}`} ><a><Image
                   className='lg:h-48 md:h-36 w-full object-cover object-center hover:opacity-75 cursor-pointer'
                   src={image}
-                  width={1280}
-                  height={1280}
+                  width={600}
+                  height={550}
                   alt='blog'
                 /></a></Link>
                 <div className='p-6'>

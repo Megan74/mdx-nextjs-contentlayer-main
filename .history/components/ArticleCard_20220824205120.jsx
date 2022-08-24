@@ -17,8 +17,8 @@ export default function ArticleCard({
       <section className=' text-gray-600 body-font'>
        
          
-            <div className=' p-4 m-auto mb-4 mt-4 md:w-1/3'>
-              <div className='w-[40rem] m-auto border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden  mb-4 '>
+            <div className=' p-4  mb-4 mt-4 md:w-1/3'>
+              <div className='w-[50rem] m-auto border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden  mb-4 '>
                 <Link href={`/article/${slug}`} ><a><Image
                   className='lg:h-48 md:h-36 w-full object-cover object-center hover:opacity-75 cursor-pointer'
                   src={image}
