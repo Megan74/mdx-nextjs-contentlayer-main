@@ -24,35 +24,34 @@ Modern frameworks, dependencies and new packages are daily created to improve th
 Among the different type of bugs, the main ones are named **software regressions** :
 
  - The local bugs : a code change that causes a new dysfunction in the modified module or component. Example: a missing semi-colon that paralyze a whole CSS file.
- - The remote bugs : a change in one part of the application that break the functionality in another module or component. Example: importing a module with a typo in the file title.
+ - The remote bugs : a change in one part of the application that break the functionality in another module or component.
  - The unmasked bugs : a code change notifiying an already existing bug that had no effect before the change.
 
-Indeed, development projects are getting bigger with newer functionalities and features. It will enhance the web interface perfomance but the code will more likely to face bugs and blocks along the way, as incompatibility issues for example.
+Indeed, development projects are getting bigger with these newer functionalities and features installed, so more likely to face bugs and blocks along the way, as incompatibility issues for example.
 
-Conclusion : Developers have to logically structure their applications in a more secure way.
+Conclusion : Developers have to logically structure applications in a secure way.
 
 ## Patterns Paradigms Set of rules
 
-Debugging is a way to learn and a way to re organise effectively its project, so the codebase stays maintainable in the long run. 
+Debugging is a way to learn and a way to re organise effectively its project, so the codebase stays maintanable in the long run. 
 
-Along the way, strategies and conventions have to be incorporated, to debug more easily when blocks are faced, and secure the codebase until its online deployment.
+Along the way, strategies have to be incorporated, to debug more easily when you face these blocks and secure the codebase until its online deployment.
 
-My MVC lecture <a href="/articles/post-7">post </a>, is actually an perfect example on how to standardize the codebase with a strong configuration, 
+My MVC lecture <a href="/articles/post-7">post </a> , is actually an efficient example on how to standardize the codebase with a strong configuration, 
 that will avoid any dysfunctions during the different building phases.
 
-That architecture pattern, split the code into three modules, in order to identify quickly which roles and repsonsibilities each of these possesses: 
+That architecture pattern, split the code into different modules, in order to identify quickly which roles and repsonsibilities each of these 
+code possesses. By identifying and categorize the codebase into different modules, troubleshooting bugs are getting easier and quicker.
+
+And even after adding or modifying features into the application, the Model View Controller pattern will provide an enhanced protection of the code for the team that is building it.
 
 The three modules : 
 
 -Model : data architecture 
 - View : graphic user interface 
-- Controller : interaction functionality between the view and the model.
+- Controller : interaction functionality between the view and the model,
 
-# Conclusion
-
-By identifying and categorize the codebase into these different modules, troubleshooting bugs are getting easier and quicker.
-And even after adding or modifying features into the application, the Model View Controller pattern provides an enhanced protection of the code for the team that is building it. 
-That paradigm is smartly designed to update/change each one of these sections, without fearing of breaking any other parts of the application. 🥳 🥳 🥳
+ are specifically designed to update each one of these sextions without fearing of breaking the other parts of the application.
 
 
 
