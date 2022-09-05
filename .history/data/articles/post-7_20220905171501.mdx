@@ -13,7 +13,8 @@ author:
 image: '/images/pic9.png'
 ---
 
-# Lecture on Model View Controller
+## Lecture on Model View Controller
+
 
 Programming projects launched by companies are usually built by team groups. To increase the productivity, the quickness and efficiency, for these websites and web applications to be properly deployed online and exploited by customers and partners, patterns and specific paradigms had to be implemented, and are now required.
 
@@ -26,7 +27,7 @@ The separation of concerns is actually a programming methodology that split the 
 That paradigm invented in 1978 by the Norwegian computer engineer Trygve Reenskaug, was specifically created to encapsulate and abstract the backend code into different and specific sections, according to their roles and repsonsibilities. The MVC architecture purpose, was specifically funded
 so the codebase remain standardized, organized, from production to its online deployment. The MVC beauty resides in its capability of modifiying one of these divided portions logic, **without** disrupting any of the rest of the project.
 
-## What does MVC mean exactly ?
+# What does MVC mean exactly ?
 
 ·         La View (ou les vues) représente l’interface graphique à livrer au client qui en fait la requête. Avoir le code lié à l’interface isolé de la logique métier ou des données permet de faire des modifications à l’interface graphique sans avoir à se soucier de casser du code métier ou la structure des données.
 ·         Le(s) Controller(s) sont au cœur de la logique métier de votre application. Ils se situent entre les vues et le model. Les requêtes qu’un client va faire depuis l’interface graphique, la view, vont être dirigées vers un controller qui sera en charge de manipuler les données dont il a besoin avec la brique Model, la traiter suivant le besoin métier, puis ordonner à la view de répondre au client avec les bons éléments.
@@ -38,58 +39,77 @@ While the MVC paradigm is pursposely designed to interact with each other, the m
 
 - Controllers : are the essential segment of the MVC pattern and the programming process. They connect the view requests with the model databases. The controllers role is to redirect the type of requests (Get, Post, Put, Delete) sent from view, the  clientside browser, to the appropriate branch. 
 
-•The Router: the router is the first backend server layer, its role is to filter the requests recieved on the clientside from view. The router functionality is to listen to the specific URL/request, so it can properly identify which CRUD : Create/Post, Read/Get, Update,Put, Delete reques has been sent, so it can then redirect it to the adequate controller.
+         •The Router: the router is the first backend server layer, its role is to filter the requests recieved on the clientside from view. The router functionality is to listen to the specific URL/request, so it can properly identify which CRUD : Create/Post, Read/Get, Update,Put, Delete reques has been sent, so it can then redirect it to the adequate controller.
 
-•The Controller: which is the MVC backend programming component, will then receive the request directed accordingly by the router from the view, and will then match that request to the adequate controller functionality, so it can respond back to the clientside, with the suitable elements. The controller responsibility is to execute an action required by the UI via the router.
+         •The Controller: which is the MVC backend programming component, will then receive the request directed accordingly by the router from the view, and will then match that request to the adequate controller functionality, so it can respond back to the clientside, with the suitable elements. The controller responsibility is to execute an action required by the UI via the router.
       Note: According to the nature of the req, the controller can either directly execute an action to view (ex: refresh a page), either go through models to collect/retrieve required data.
 
+
+# Conclusion
 
 These three architectural patterns, help organize and visualize how the project works underneath the hood. It gives us a better understanding of each of its component functionalities and their missions. The Model can be considered as a sort of a bucket, connecting the server with a database that stores all the informations and data needed for further requests.
  Mongodb is my favorite non-relational database, its specificity is that it assembles data into collections of document, that are array of objects prototype. The model branch regroups these specific files, that are duplicated thanks to Mongoose. Mongoose interface is convenient when you work with a team, because the data sotred in the model is accessible by the other software engineer
  without having to share the usernames and passwords. The other perks of Mongodb, is its data rendering flexibility: the schema functionality is a Mongodb specific configuration, that gives you the freedom 
  to define how you want your data to be displayed on the user interface. 
 
+# Just testing out [Code Hike](https://codehike.org/)
 
+Some normal `markdown`
 
-Example
-
- # Todo.js
- 
- ```js index.js box=1[30:50]
-
- // connect mongoose database in the Todo.js file
- const mongoose = require('mongoose')
-
-/* invoke the schema functionality in the Todo.js file, 
-and gives you the liberty to create your own customized collection 
-with key-pair values.*/
- const TodoSchema = new mongoose.Schema({
-  todo : {
-    type: String,
-    required: true,
-  },
-  completed: {
-    type: Boolean,
-    required: true,
-  },
-  userId: {
-    type: String,
-    required: true
-  }
-}) 
-
-/* will export the mongoose model in any files needed, 
-and be called by the controller to be rendered in view as server response */
-module.exports = mongoose.model('Todo', TodoSchema) 
+## Annotation Example
+```js index.js box=1[25:39]
+console.log("Some code. I am annotated!")
 ```
 
-The code above, is a schema example, that shows how a collection can be defined and rendered in the database. 
+## Focus Example
+```js next.config.js focus=1:2,7
+const { remarkCodeHike } = require("@code-hike/mdx");
+const theme = require("shiki/themes/monokai.json");
 
-The Todo collection will contain a type with a string prototype, the status completed and a boolean value, plus a userId as a string. 
-Any properties can be configured in the mongoose schema, it is up to the
+const withMDX = require("@next/mdx")({
+  extension: /\.mdx?$/,
+  options: {
+    remarkPlugins: [[remarkCodeHike, { theme }]],
+    rehypePlugins: [],
+  },
+});
+
+module.exports = withMDX({
+  pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
+});
+```
+
+<CH.Section>
+
+## Code Links Example
+
+We are looking at the [console.log](focus://console.js#2) function today
+
+<CH.Code>
+```js console.js
+console.table(["Hello", "World"])
+console.log("Hello World")
+```
+</CH.Code>
+
+</CH.Section>
+
+
+//will export the mongoose model in any file needed
+module.exports = mongoose.model('Todo', TodoSchema) */
+
+The code above, is a schema example, showing how a collection can be defined and rendered in the database. Here my Todo collection will contain a type with a string prototype, the status 'completed' and a boolean value, plus a value id as a string. Any categories can be configured in the schema it is up to the
 web developer. And that is the beauty of Mongodb programming, the data customisation.  
 
+ that will be rendered to front end templates (ejs, react, hug), so views can shw them in the front end. Controller connect the right req with the right controller so the actions requested can be executed and the browser can receive the  according response.
 
 
-
+Votre code source qui était simple et dans lequel vous vous retrouviez facilement devient un plat de spaghetti 🍝 ! Plus celui-ci grandit, plus il deviendra difficile d’ajouter une fonctionnalité sans créer un dysfonctionnement dans une autre déjà existante. C’est ce qu’on appelle une régression. Sans une organisation standard de votre codebase, débugger deviendra une tâche longue et pénible. Collaborer avec un autre développeur sur votre projet demandera une assistance constante de votre part.
+C’est pour éviter ces handicaps que le MVC a été mis en évidence et proposé comme un pattern d’architecture.
+En structurant une codebase avec l’architecture MVC vous lui apportez:
+Une facilité pour retrouver les différents modules ou fonctions de votre code
+Un débuggage plus rapide
+Un gain de temps à la modification ou ajout de nouvelles fonctionnalités
+Un confort pour le développement, par vous-même ou un futur collaborateur
+Une séparation entre la logique métier, les interfaces graphiques et la modélisation des données de telle sorte à ce que la modification de l’un ne casse pas l’autre
  

@@ -15,6 +15,7 @@ image: '/images/pic9.png'
 
 # Lecture on Model View Controller
 
+
 Programming projects launched by companies are usually built by team groups. To increase the productivity, the quickness and efficiency, for these websites and web applications to be properly deployed online and exploited by customers and partners, patterns and specific paradigms had to be implemented, and are now required.
 
 The purpose of integrating set of rules and conventions, are also to preserve an organized and standardized axis, that is readable, that can be easily debugged, and perfectly maintained by the the rest of the software engineer team.
@@ -38,9 +39,9 @@ While the MVC paradigm is pursposely designed to interact with each other, the m
 
 - Controllers : are the essential segment of the MVC pattern and the programming process. They connect the view requests with the model databases. The controllers role is to redirect the type of requests (Get, Post, Put, Delete) sent from view, the  clientside browser, to the appropriate branch. 
 
-•The Router: the router is the first backend server layer, its role is to filter the requests recieved on the clientside from view. The router functionality is to listen to the specific URL/request, so it can properly identify which CRUD : Create/Post, Read/Get, Update,Put, Delete reques has been sent, so it can then redirect it to the adequate controller.
+         •The Router: the router is the first backend server layer, its role is to filter the requests recieved on the clientside from view. The router functionality is to listen to the specific URL/request, so it can properly identify which CRUD : Create/Post, Read/Get, Update,Put, Delete reques has been sent, so it can then redirect it to the adequate controller.
 
-•The Controller: which is the MVC backend programming component, will then receive the request directed accordingly by the router from the view, and will then match that request to the adequate controller functionality, so it can respond back to the clientside, with the suitable elements. The controller responsibility is to execute an action required by the UI via the router.
+         •The Controller: which is the MVC backend programming component, will then receive the request directed accordingly by the router from the view, and will then match that request to the adequate controller functionality, so it can respond back to the clientside, with the suitable elements. The controller responsibility is to execute an action required by the UI via the router.
       Note: According to the nature of the req, the controller can either directly execute an action to view (ex: refresh a page), either go through models to collect/retrieve required data.
 
 
@@ -60,6 +61,8 @@ Example
  // connect mongoose database in the Todo.js file
  const mongoose = require('mongoose')
 
+```
+```js next.config.js focus=1:2,9
 /* invoke the schema functionality in the Todo.js file, 
 and gives you the liberty to create your own customized collection 
 with key-pair values.*/
@@ -81,6 +84,7 @@ with key-pair values.*/
 /* will export the mongoose model in any files needed, 
 and be called by the controller to be rendered in view as server response */
 module.exports = mongoose.model('Todo', TodoSchema) 
+
 ```
 
 The code above, is a schema example, that shows how a collection can be defined and rendered in the database. 

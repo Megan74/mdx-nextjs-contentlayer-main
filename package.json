@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@code-hike/mdx": "^0.7.5-next.0",
     "@tailwindcss/typography": "^0.5.3",
     "contentlayer": "^0.2.5",
     "next": "12.2.0",

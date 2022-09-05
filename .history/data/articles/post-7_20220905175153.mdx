@@ -60,6 +60,8 @@ Example
  // connect mongoose database in the Todo.js file
  const mongoose = require('mongoose')
 
+```
+```js next.config.js focus=1:2,9
 /* invoke the schema functionality in the Todo.js file, 
 and gives you the liberty to create your own customized collection 
 with key-pair values.*/
@@ -81,6 +83,7 @@ with key-pair values.*/
 /* will export the mongoose model in any files needed, 
 and be called by the controller to be rendered in view as server response */
 module.exports = mongoose.model('Todo', TodoSchema) 
+
 ```
 
 The code above, is a schema example, that shows how a collection can be defined and rendered in the database. 
