@@ -14,14 +14,14 @@ export const SingleArticle = ({ author, image, category, title, children }) => {
         <Image
           className='lg:h-48 md:h-36 w-full object-cover object-center'
           src={image}
-          width={720}
-          height={400}
+          width={820}
+          height={600}
           alt='blog'
         />
         <hr />
         <br />
         <div className='flex items-center '>
-          <Image src={author.image} width={70} height={70} alt='blog' />
+          <Image src={author.image} width={90} height={90} alt='blog' />
 
           <div>
             <strong>{author.name}</strong>

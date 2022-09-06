@@ -14,19 +14,19 @@ export const SingleArticle = ({ author, image, category, title, children }) => {
         <Image
           className='lg:h-48 md:h-36 w-full object-cover object-center'
           src={image}
-          width={720}
-          height={400}
+          width={820}
+          height={500}
           alt='blog'
         />
         <hr />
         <br />
-        <div className='flex items-center'>
-          <Image src={author.image} width={50} height={50} alt='blog' />
+        <div className='flex items-center '>
+          <Image src={author.image} width={70} height={70} alt='blog' />
 
           <div>
             <strong>{author.name}</strong>
             <br />
-            <span>Software advisor</span>
+            <span>Software engineer</span>
           </div>
         </div>
         <article className='mx-autotext-gray-500 prose-md prose prose-indigo py-24 lg:prose-lg'>
