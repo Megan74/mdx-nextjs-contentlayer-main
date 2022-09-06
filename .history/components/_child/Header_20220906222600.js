@@ -7,7 +7,7 @@ export default function Header() {
 
   return (
 
-    <><nav className=' md:h-full md:w-48 w-full  m-auto  py-4 bg-blue-800 shadow'>
+    <><nav className=' lg:h-48 md:w-2xl w-full  m-auto  py-4 bg-blue-800 shadow'>
           <div className='w-full container mx-auto flex flex-wrap items-center justify-between'>
 
               <nav>
