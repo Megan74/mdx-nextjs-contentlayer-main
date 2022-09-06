@@ -17,8 +17,8 @@ export default function ArticleCard({
       <section className=' text-gray-600 body-font'>
        
          
-            <div className=' p-2 m-auto mb-4 mt-4 md:w-1/3'>
-              <div className='w-[50rem] m-auto border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden  mb-4 '>
+            <div className=' p-2 mx-auto mb-4 mt-4 '>
+              <div className='w-[55rem] lg:h-88 md:h-90 m-auto  border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden  mb-4 '>
                 <Link href={`/article/${slug}`} ><a><Image
                   className='lg:h-48 md:h-36 w-full="true" object-cover object-center hover:opacity-75 cursor-pointer'
                   src={image}
@@ -53,7 +53,7 @@ export default function ArticleCard({
                         <path d='M12 5l7 7-7 7'></path>
                       </svg>
                     </a>
-                    <span className='text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200'>
+                    <span className='text-gray-400 ml-3 mr-3 inline-flex items-center lg:ml-auto md:ml-0  leading-none text-sm pr-3 py-1 border-r-2 border-gray-200'>
                       {readingTime}
                     </span>
                     <span className='text-gray-400 inline-flex items-center leading-none text-sm'>
