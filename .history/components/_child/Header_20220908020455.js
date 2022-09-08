@@ -17,7 +17,7 @@ export default function Header() {
               </nav>
 
               
-    <div className="flex gap-6  justify-end text-lg no-underline text-white pr-8">
+    <div className="flex gap-6 items-center text-lg no-underline text-white pr-8">
     <ul className='flex items-center justify-between font-bold text-sm text-white uppercase no-underline'>
                   <Link href={"https://megan-portfolio.netlify.app/"}><li><a className='hover:text-gray-200 hover:underline px-4 cursor-pointer'>About Me</a></li></Link>
                   </ul>

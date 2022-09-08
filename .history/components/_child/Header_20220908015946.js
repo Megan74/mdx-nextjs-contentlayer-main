@@ -7,8 +7,10 @@ export default function Header() {
 
   return (
 
-    <>       <nav className=" bg-blue-900 h-50 shadow sm:flex  sm:px-4 sm:py-3">
-    <div className="flex items-center justify-between px-7 py-5 sm:p-0">
+    <>
+
+          <nav className=" bg-blue-900 shadow sm:flex  sm:px-4 sm:py-3">
+    <div className="flex items-center justify-between px-4 py-3 sm:p-0">
 
               <nav>
                   <ul className='flex items-center justify-between font-bold text-sm text-white uppercase no-underline'>
@@ -17,8 +19,8 @@ export default function Header() {
               </nav>
 
               
-    <div className="flex gap-6  justify-end text-lg no-underline text-white pr-8">
-    <ul className='flex items-center justify-between font-bold text-sm text-white uppercase no-underline'>
+    <div className="flex gap-6  text-lg no-underline text-white pr-8">
+    <ul className='flex justify-between font-bold text-sm text-white uppercase no-underline'>
                   <Link href={"https://megan-portfolio.netlify.app/"}><li><a className='hover:text-gray-200 hover:underline px-4 cursor-pointer'>About Me</a></li></Link>
                   </ul>
         <Link href={'https://github.com/Megan74'}>
