@@ -43,9 +43,9 @@ If it is a **PUT** request: via the edit button, that specific request will conn
 If **POST** request: the application Routes that redirect that specific request to the corresponding controller's name (user, campground or review), will also connect the server to the model data structure, so it can add the new data sent from the browser via a form, to the server. A post request can be a brand new campground, a brand new review, or a new user added to the database, and then the frontend. After the controller adds that required data to the backend, it will then execute a refreshing action to render the page with the brand new information.
 If **DELETE** request: as per the update request, the deleting action via its eponym button, will activate the model section so it can retrieve via the id data invoked, the corresponding collection/object name, and erase that required data via its ID name. A refreshing action will then follow, and render a new page with the subtracted info.
 
- •The Model folder contains different sections matching with the application pages, so the exploited data can be sent/retrieve/deleted from/to the right branch : User, Campground and Review. The Model is summoned upon by the controllers, so it can then operate through the mongoose database, by retrieving, adding, updating or deleting, the specific data via its ID. And then be re-rendered to the browser. The manipulated data is defined by a Schema model, which is a Mongodb functionality. That object-like protoype, structures the database with flexibility, and displays the element of your own choices into the Mongodb collections.
+ •The Model folder contains different sections matching with the application pages, so the exploited data can be sent/retrieve/deleted from/to the right branch : User, Campground and Review. The Model is summoned upon by the controllers, so it can then operate through the mongoose database, by retrieving, adding, updating or deleting specific data via theirs ID. And then be re-rendered to the browser. The manipulated data is defined by the Schema model, a Mongodb functionality. That object like protoype, structures the database with flexibility, and inform which element will be displayed into the Mongodb collections.
 
- • The View folder: that folder is displayed to the user, via the ejs template that is used to plug the data. Every pages from the project are placed into that section. The View is only connected to the Controller, and has no relation with the Model, no matter the request activated.
+ • The View folder : that folder is displayed to the user, via the ejs template that is used to plug the data. Every pages from the project are placed into that section. The View is only connected to the Controller and has no relation with the Model, no matter the request activated.
 
 ## The code architecture 
  ```js index.js box=1[30:50]
@@ -72,14 +72,15 @@ middleware.js
 schemas.js : input validations
 ```
 
-That full stack app is my 100h(and plus plus) projects. I have put blood, sweat and tears into it, and
+That full stack app is my 100h(and plus plus) projects. I have put blood sweat and tears into it, and
 I am really proud and excited, to have been able to fully develop, produce and deploy that application.
 
 Nature and camping are themes that I am truely interested in. Mother Nature possesses that silent and appeasing power, to get you connected on several levels within yourself, and your mesmerizing surroundings. 
-That unique atmosphere is no near comparable than other habitats: the woods, the mountains, natural parks, all of these wildlife (barely) untouched by the human existence, instill a sense of responsibility to protect what remains, to respect the flora and the fauna, 
-to preserve these remaining and fragile eco-systems, and also to comprehend how each of them behave.
+That unique atmosphere is no near comparable than other habitats :
+ the woods, the mountains, natural parks, all of these wildlife  (barely) untouched by the human existence areas, instill a sense of responsibility to protect what is left, to respect the flora and fauna, 
+  to preserve these remaining and fragile eco-systems, and to comprehend how each of them function.
 
-I hope that web application will encourage to a certain degree, people to book a tent once in their lifetime, in a campsite, to disconnect from the daily routine, to experiment the wildlife for a few days, in order to sense how sacred our Planet is.
+I hope that web application will encourage to a certain degree, people to book a tent once in a campsite, to disconnect from the daily routine, to experiment the wildlife for a few days, to sense how sacred our Planet is.
 
 
 Here is the web application direct link : <a href="https://yelpcamp74.herokuapp.com/"> **click here** </a>
