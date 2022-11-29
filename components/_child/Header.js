@@ -7,7 +7,8 @@ export default function Header() {
 
   return (
 
-    <>       <nav className=" bg-blue-900 h-50 shadow sm:flex  sm:px-4 sm:py-3">
+    <>      <header className='w-full container mx-auto'>
+         <nav className=" bg-blue-900 h-50 shadow sm:flex  sm:px-4 sm:py-3">
     <div className="flex items-center justify-between px-7 py-5 sm:p-0">
 
               <nav>
@@ -36,7 +37,7 @@ export default function Header() {
 
           </div>
 
-      </nav><header className='w-full container mx-auto'>
+      </nav>
               <div className='flex flex-col items-center py-12'>
                   <a className='font-bold text-gray-800 uppercase hover:text-gray-700 text-5xl' href={'/'}>
                       Welcome to my World! </a>
